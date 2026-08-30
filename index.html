@@ -1,1 +1,25 @@
-<!doctype html><html><head><title>The Growth Consultancy</title></head><body></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Growth Consultancy</title>
+</head>
+<body>
+  <script>
+    fetch('./The_Growth_Consultancy_Implemented.html')
+      .then(function(response) {
+        if (!response.ok) throw new Error('Website file could not be loaded.');
+        return response.text();
+      })
+      .then(function(html) {
+        document.open();
+        document.write(html);
+        document.close();
+      })
+      .catch(function() {
+        document.body.innerHTML = '<p style="font-family:Arial,sans-serif;padding:40px">The Growth Consultancy website is temporarily unavailable.</p>';
+      });
+  </script>
+</body>
+</html>
