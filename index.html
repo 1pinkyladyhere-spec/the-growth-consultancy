@@ -19,10 +19,11 @@
         if (heroEnd >= 0) {
           heroEnd += '</section>'.length;
           var startingPointDoorway = `
-<section aria-label="Starting Point" style="background:var(--paper,#fffaf1);border-top:1px solid rgba(199,154,69,.42);border-bottom:1px solid rgba(199,154,69,.42);padding:28px 20px;text-align:center;">
+<section aria-label="Starting Point" style="background:var(--paper,#fffaf1);border-top:1px solid rgba(199,154,69,.42);border-bottom:1px solid rgba(199,154,69,.42);padding:32px 20px;text-align:center;">
   <div style="width:min(900px,100%);margin:0 auto;">
-    <p style="margin:0 0 5px;font-family:var(--sans,Arial,sans-serif);font-size:.9rem;letter-spacing:.02em;color:var(--muted,#65716b);">Still figuring out what comes next?</p>
+    <p style="margin:0 0 7px;font-family:var(--sans,Arial,sans-serif);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--gold,#c79a45);">Not a business owner?</p>
     <a href="starting-point.html" style="display:inline-block;font-family:var(--serif,Georgia,serif);font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.25;color:var(--ink,#10261f);text-decoration:none;border-bottom:1px solid var(--gold,#c79a45);padding-bottom:2px;">Start here → Starting Point</a>
+    <p style="margin:10px auto 0;max-width:650px;font-family:var(--sans,Arial,sans-serif);font-size:.92rem;line-height:1.55;color:var(--muted,#65716b);">You don’t have to know what comes next. Starting Point is a place to explore what else could be possible for your life.</p>
   </div>
 </section>`;
           html = html.slice(0, heroEnd) + startingPointDoorway + html.slice(heroEnd);
