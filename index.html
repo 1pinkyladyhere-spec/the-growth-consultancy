@@ -13,6 +13,21 @@
         return response.text();
       })
       .then(function(html) {
+        var heroStart = html.indexOf('<section class="hero">');
+        var heroEnd = heroStart >= 0 ? html.indexOf('</section>', heroStart) : -1;
+
+        if (heroEnd >= 0) {
+          heroEnd += '</section>'.length;
+          var startingPointDoorway = `
+<section aria-label="Starting Point" style="background:var(--paper,#fffaf1);border-top:1px solid rgba(199,154,69,.42);border-bottom:1px solid rgba(199,154,69,.42);padding:28px 20px;text-align:center;">
+  <div style="width:min(900px,100%);margin:0 auto;">
+    <p style="margin:0 0 5px;font-family:var(--sans,Arial,sans-serif);font-size:.9rem;letter-spacing:.02em;color:var(--muted,#65716b);">Still figuring out what comes next?</p>
+    <a href="starting-point.html" style="display:inline-block;font-family:var(--serif,Georgia,serif);font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.25;color:var(--ink,#10261f);text-decoration:none;border-bottom:1px solid var(--gold,#c79a45);padding-bottom:2px;">Start here → Starting Point</a>
+  </div>
+</section>`;
+          html = html.slice(0, heroEnd) + startingPointDoorway + html.slice(heroEnd);
+        }
+
         document.open();
         document.write(html);
         document.close();
