@@ -45,6 +45,13 @@
         /* Match the proven Starting Point method: every Growth Consultancy inquiry email link carries the full subject and body directly in its href. */
         html = html.split('mailto:elle@thegrowthconsultancybyelle.com?subject=Growth%20Consultancy%20Inquiry').join(inquiryMailto);
 
+        /* Approved book-order guidance: keep customers routed directly to Lulu for fulfillment support. */
+        html = html.replace('A Note About Your Order', 'A Quick Note After You Order');
+        html = html.replace(
+          `Need help with your order? If your book arrives damaged, has a printing issue, or you have a question about your order, please contact The Growth Consultancy and we’ll help you with next steps. Because each book is printed to order, returns and replacements are subject to our Book Order Help policy.`,
+          `Keep your Lulu order confirmation and shipping emails until your books arrive and you’ve checked your order. When your package arrives, we recommend checking your books before discarding the packing slip or packaging.<br><br>If something arrives damaged, defective or incorrect, take clear photos and keep the item and packaging while you contact Lulu.<br><br><strong>Need help with an order?</strong> <a href="book-order-help.html" style="color:var(--gold,#c79a45);font-weight:800;text-decoration:underline;text-underline-offset:3px;">Book Order Help →</a>`
+        );
+
         var booksSection = `<section class="section" id="books-resources">`;
         var approvedAdditions = `
 <section class="section paper" aria-label="Diagnostic Assessment">
