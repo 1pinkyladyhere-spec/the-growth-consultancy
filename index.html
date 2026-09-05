@@ -37,6 +37,9 @@
         var approvedReadyParagraph = `<p>If you're considering working with me, I highly recommend completing both before reaching out. You'll come into our conversation already thinking about some of the questions we'll need to explore, which allows us to begin with a deeper understanding of where you are and where you'd like to go.</p>`;
         html = html.replace(currentReadyParagraph, approvedReadyParagraph);
 
+        /* Approved navigation change only: rename the existing top-nav contact link and point it to the new inquiry section. */
+        html = html.replace(/<a([^>]*href=")[^"]*("[^>]*)>Start a Conversation<\/a>/, '<a$1#growth-inquiry$2>Contact Elle</a>');
+
         var booksSection = `<section class="section" id="books-resources">`;
         var approvedAdditions = `
 <section class="section paper" aria-label="Diagnostic Assessment">
@@ -54,7 +57,7 @@
   </div>
 </section>
 
-<section class="section dark" aria-label="Growth Consultancy inquiry">
+<section class="section dark" id="growth-inquiry" aria-label="Growth Consultancy inquiry">
   <div class="container">
     <div class="copy-stack reveal">
       <h2>What Could Change If You Started Now?</h2>
@@ -64,7 +67,7 @@
       <p>If you're ready to find out what could be possible for you and your business, I'd love to hear from you.</p>
       <p><strong>Send me an email. Tell me a little about where things are now and where you'd like to go.</strong></p>
       <p>I'll personally read it, and if I believe I may be able to help, we'll schedule a conversation.</p>
-      <div class="btn-row"><a class="btn gold" href="mailto:elle@thegrowthconsultancybyelle.com?subject=Growth%20Consultancy%20Inquiry">Email Elle →</a></div>
+      <div class="btn-row"><a class="btn gold" href="mailto:elle@thegrowthconsultancybyelle.com?subject=Growth%20Consultancy%20Inquiry&body=Hi%20Elle%2C%0A%0AI%27m%20reaching%20out%20because%20I%27m%20interested%20in%20learning%20more%20about%20working%20with%20you.%0A%0AA%20little%20about%20where%20things%20are%20right%20now%3A%0A%0A%5BWrite%20here%5D%0A%0AWhere%20I%27d%20like%20to%20go%3A%0A%0A%5BWrite%20here%5D%0A%0AWhat%20prompted%20me%20to%20reach%20out%20now%3A%0A%0A%5BWrite%20here%5D%0A%0AThank%20you%2C%0A%5BYour%20name%5D">Email Elle →</a></div>
     </div>
   </div>
 </section>
