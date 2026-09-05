@@ -29,6 +29,49 @@
           html = html.slice(0, heroEnd) + startingPointDoorway + html.slice(heroEnd);
         }
 
+        var currentConsultantParagraph = `<p>When I look at a business, I want to understand it before I make recommendations about it. I want to know how it became what it is today, why certain decisions were made, what you value about what you've built and what you want it to make possible from here.</p>`;
+        var approvedConsultantParagraph = `<p>Every business has a history. I want to know yours. I want to know how it became what it is today, why certain decisions were made, what you value about what you've built and what you want it to make possible from here.</p>`;
+        html = html.replace(currentConsultantParagraph, approvedConsultantParagraph);
+
+        var currentReadyParagraph = `<p>If you're considering working with me, I highly recommend completing both before scheduling your first session. You'll come into our conversation already thinking about some of the questions we'll need to explore, which means we can spend more of our time together focused on where you want to go and what your business needs to get you there.</p>`;
+        var approvedReadyParagraph = `<p>If you're considering working with me, I highly recommend completing both before reaching out. You'll come into our conversation already thinking about some of the questions we'll need to explore, which allows us to begin with a deeper understanding of where you are and where you'd like to go.</p>`;
+        html = html.replace(currentReadyParagraph, approvedReadyParagraph);
+
+        var booksSection = `<section class="section" id="books-resources">`;
+        var approvedAdditions = `
+<section class="section paper" aria-label="Diagnostic Assessment">
+  <div class="container">
+    <div class="copy-stack reveal">
+      <h2>I Don't Start With Answers. I Start By Understanding.</h2>
+      <p>If, after our initial conversation, we decide it makes sense to work together, the first paid step is a <strong>Diagnostic Assessment</strong>.</p>
+      <p>This is where I get into the business itself.</p>
+      <p>I'll ask you to share information about your business and answer a series of questions in your own words. Then I take the time to evaluate what you've shared, look at how the business is operating, and consider what may be standing between where you are and where you want to go.</p>
+      <p>From there, I develop my assessment and recommendations.</p>
+      <p>Then we'll schedule a call to go through what I've found, what I believe deserves your attention, and what I recommend you consider next.</p>
+      <p>You may decide to take those recommendations and move forward on your own. Or we may identify additional work you'd like my help with. If we both decide to continue, we'll determine the scope of that work separately.</p>
+      <p><strong>Because I don't believe in giving you answers before I've taken the time to understand the questions.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" aria-label="Growth Consultancy inquiry">
+  <div class="container">
+    <div class="copy-stack reveal">
+      <h2>What Could Change If You Started Now?</h2>
+      <p>Six months from now, your business could look different.<br>Your days could look different.<br>The way you feel about what you've built could be different.</p>
+      <p>But at some point, thinking about what needs to change has to become a decision to begin.</p>
+      <p><strong>Maybe this is that moment.</strong></p>
+      <p>If you're ready to find out what could be possible for you and your business, I'd love to hear from you.</p>
+      <p><strong>Send me an email. Tell me a little about where things are now and where you'd like to go.</strong></p>
+      <p>I'll personally read it, and if I believe I may be able to help, we'll schedule a conversation.</p>
+      <div class="btn-row"><a class="btn gold" href="mailto:elle@thegrowthconsultancybyelle.com?subject=Growth%20Consultancy%20Inquiry">Email Elle →</a></div>
+    </div>
+  </div>
+</section>
+
+`;
+        html = html.replace(booksSection, approvedAdditions + booksSection);
+
         document.open();
         document.write(html);
         document.close();
