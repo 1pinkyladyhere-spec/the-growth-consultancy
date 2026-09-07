@@ -37,15 +37,11 @@
         var approvedReadyParagraph = `<p>If you're considering working with me, I highly recommend completing both before reaching out. You'll come into our conversation already thinking about some of the questions we'll need to explore, which allows us to begin with a deeper understanding of where you are and where you'd like to go.</p>`;
         html = html.replace(currentReadyParagraph, approvedReadyParagraph);
 
-        /* Approved navigation change only: rename the existing top-nav contact link and point it to the new inquiry section. */
         html = html.replace(/<a([^>]*href=")[^"]*("[^>]*)>Start a Conversation<\/a>/, '<a$1#growth-inquiry$2>Contact Elle</a>');
 
         var inquiryMailto = `mailto:elle@thegrowthconsultancybyelle.com?subject=Growth%20Consultancy%20Inquiry&amp;body=Hi%20Elle%2C%0A%0AI%27m%20reaching%20out%20because%20I%27m%20interested%20in%20learning%20more%20about%20working%20with%20you.%0A%0AA%20little%20about%20where%20things%20are%20right%20now%3A%0A%0A%5BWrite%20here%5D%0A%0AWhere%20I%27d%20like%20to%20go%3A%0A%0A%5BWrite%20here%5D%0A%0AWhat%20prompted%20me%20to%20reach%20out%20now%3A%0A%0A%5BWrite%20here%5D%0A%0AThank%20you%2C%0A%5BYour%20name%5D`;
-
-        /* Match the proven Starting Point method: every Growth Consultancy inquiry email link carries the full subject and body directly in its href. */
         html = html.split('mailto:elle@thegrowthconsultancybyelle.com?subject=Growth%20Consultancy%20Inquiry').join(inquiryMailto);
 
-        /* Approved book-order guidance, matched to the exact live book-note markup. */
         var currentBookOrderNote = `<p class="book-link-note">Secure checkout and fulfillment are handled by Lulu.<br><strong>Need help with your order?</strong> If your book arrives damaged, has a printing issue, or you have a question about your order, please contact The Growth Consultancy and we’ll help you with next steps. Because each book is printed to order, returns and replacements are subject to our Book Order Help policy.</p>`;
         var approvedBookOrderNote = `<p class="book-link-note">Secure checkout and fulfillment are handled by Lulu.<br><br><strong>A Quick Note After You Order</strong><br>Keep your Lulu order confirmation and shipping emails until your books arrive and you’ve checked your order. When your package arrives, we recommend checking your books before discarding the packing slip or packaging.<br><br>If something arrives damaged, defective or incorrect, take clear photos and keep the item and packaging while you contact Lulu.<br><br><strong>Need help with an order?</strong> <a href="book-order-help.html" style="color:var(--gold,#c79a45);font-weight:800;text-decoration:underline;text-underline-offset:3px;">Book Order Help →</a></p>`;
         html = html.replace(currentBookOrderNote, approvedBookOrderNote);
@@ -84,6 +80,28 @@
 
 `;
         html = html.replace(booksSection, approvedAdditions + booksSection);
+
+        /* Approved Resources addition: place Insights from Elle immediately after the existing Books & Resources section. */
+        var booksStart = html.indexOf(booksSection);
+        if (booksStart >= 0) {
+          var booksEnd = html.indexOf('</section>', booksStart);
+          if (booksEnd >= 0) {
+            booksEnd += '</section>'.length;
+            var insightsDoorway = `
+<section class="section paper" aria-label="Insights from Elle">
+  <div class="container">
+    <div class="copy-stack reveal">
+      <div class="eyebrow">Insights from Elle</div>
+      <h2>Should I Expand My Successful Business?</h2>
+      <p class="kicker"><strong>Start With Where You Want It to Take You.</strong></p>
+      <p>A successful business can create extraordinary opportunities. Before deciding whether the next one deserves a yes, establish what you want your success to make possible—and whether the opportunity takes you closer to it.</p>
+      <div class="btn-row"><a class="btn secondary" href="insights-should-i-expand-my-successful-business.html">Read the Insight →</a></div>
+    </div>
+  </div>
+</section>`;
+            html = html.slice(0, booksEnd) + insightsDoorway + html.slice(booksEnd);
+          }
+        }
 
         document.open();
         document.write(html);
