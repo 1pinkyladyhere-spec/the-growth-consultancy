@@ -29,6 +29,12 @@
           html = html.slice(0, heroEnd) + startingPointDoorway + html.slice(heroEnd);
         }
 
+        /* Make the new book easy to find from the main site navigation. */
+        html = html.replace(
+          '<a href="#books-resources">Books & Resources</a>',
+          '<a href="#books-resources">Books & Resources</a><a href="what-are-you-building-this-for.html">New Book</a>'
+        );
+
         var currentConsultantParagraph = `<p>When I look at a business, I want to understand it before I make recommendations about it. I want to know how it became what it is today, why certain decisions were made, what you value about what you've built and what you want it to make possible from here.</p>`;
         var approvedConsultantParagraph = `<p>Every business has a history. I want to know yours. I want to know how it became what it is today, why certain decisions were made, what you value about what you've built and what you want it to make possible from here.</p>`;
         html = html.replace(currentConsultantParagraph, approvedConsultantParagraph);
