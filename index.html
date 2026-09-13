@@ -81,6 +81,30 @@
 `;
         html = html.replace(booksSection, approvedAdditions + booksSection);
 
+        /* Approved book addition: feature What Are You Building This For? after the existing Books & Resources section. */
+        var bookFeature = `
+<section class="section paper" aria-label="What Are You Building This For?">
+  <div class="container">
+    <div class="copy-stack reveal" style="max-width:860px;margin:0 auto;text-align:center;">
+      <div class="eyebrow">New from Elle Lundy</div>
+      <h2>What Are You Building This For?</h2>
+      <p class="kicker"><strong>Build a Business That Supports the Life You Actually Want</strong></p>
+      <p>Growth can bring more clients, more revenue and more opportunities. It can also create a business that depends too heavily on you. This book asks you to look at what growth is actually creating—and what you want your business to make possible.</p>
+      <div class="btn-row" style="justify-content:center;">
+        <a class="btn secondary" href="what-are-you-building-this-for.html">Explore the Book →</a>
+      </div>
+    </div>
+  </div>
+</section>`;
+        var bookSectionStart = html.indexOf(booksSection);
+        if (bookSectionStart >= 0) {
+          var bookSectionEnd = html.indexOf('</section>', bookSectionStart);
+          if (bookSectionEnd >= 0) {
+            bookSectionEnd += '</section>'.length;
+            html = html.slice(0, bookSectionEnd) + bookFeature + html.slice(bookSectionEnd);
+          }
+        }
+
         /* Approved Resources addition: place Insights from Elle immediately after the existing Books & Resources section. */
         var booksStart = html.indexOf(booksSection);
         if (booksStart >= 0) {
