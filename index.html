@@ -152,6 +152,26 @@
           }
         }
 
+        /* Owned audience: low-pressure email signup before the footer. */
+        var stayConnectedSection = `
+<section aria-label="Stay connected" style="background:var(--paper,#fffaf1);border-top:1px solid rgba(199,154,69,.42);padding:56px 20px;text-align:center;">
+  <div style="width:min(820px,100%);margin:0 auto;">
+    <div class="eyebrow" style="color:var(--gold,#c79a45);">Stay Connected</div>
+    <h2 style="margin-bottom:14px;">Not ready to work together yet?</h2>
+    <p style="max-width:680px;margin:0 auto 24px;font-family:var(--sans,Arial,sans-serif);line-height:1.65;color:var(--muted,#65716b);">If something here made you think differently about your business, you don't have to be ready to reach out today. Keep me in the loop for new articles, books, ideas and occasional updates from The Growth Consultancy.</p>
+    <div style="max-width:640px;margin:0 auto;">
+      <script async data-uid="8dc465add1" src="https://the-growth-consultancy.kit.com/8dc465add1/index.js"><\/script>
+    </div>
+  </div>
+</section>`;
+        if (html.indexOf('<footer') >= 0) {
+          html = html.replace('<footer', stayConnectedSection + '<footer');
+        } else if (html.indexOf('</body>') >= 0) {
+          html = html.replace('</body>', stayConnectedSection + '</body>');
+        } else {
+          html += stayConnectedSection;
+        }
+
         document.open();
         document.write(html);
         document.close();
