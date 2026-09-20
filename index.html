@@ -75,12 +75,6 @@
   </div>
 </section>
 `;
-        var growthInquiryMarker = '<section class="section dark" id="growth-inquiry" aria-label="Growth Consultancy inquiry">';
-        var growthInquiryStart = html.indexOf(growthInquiryMarker);
-        if (growthInquiryStart >= 0) {
-          html = html.slice(0, growthInquiryStart) + brandAuthorityDoorway + html.slice(growthInquiryStart);
-        }
-
         var booksSection = `<section class="section" id="books-resources">`;
         var approvedAdditions = `
 <section class="section paper" aria-label="Diagnostic Assessment">
@@ -115,6 +109,13 @@
 
 `;
         html = html.replace(booksSection, approvedAdditions + booksSection);
+
+        /* Insert Brand & Authority Strategy immediately before the Growth Consultancy inquiry after that section has been added. */
+        var growthInquiryMarker = '<section class="section dark" id="growth-inquiry" aria-label="Growth Consultancy inquiry">';
+        var growthInquiryStart = html.indexOf(growthInquiryMarker);
+        if (growthInquiryStart >= 0) {
+          html = html.slice(0, growthInquiryStart) + brandAuthorityDoorway + html.slice(growthInquiryStart);
+        }
 
         /* Approved book addition: feature What Are You Building This For? after the existing Books & Resources section. */
         var bookFeature = `
