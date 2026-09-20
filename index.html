@@ -60,6 +60,27 @@
         var approvedBookOrderNote = `<p class="book-link-note">Secure checkout and fulfillment are handled by Lulu.<br><br><strong>A Quick Note After You Order</strong><br>Keep your Lulu order confirmation and shipping emails until your books arrive and you’ve checked your order. When your package arrives, we recommend checking your books before discarding the packing slip or packaging.<br><br>If something arrives damaged, defective or incorrect, take clear photos and keep the item and packaging while you contact Lulu.<br><br><strong>Need help with an order?</strong> <a href="book-order-help.html" style="color:var(--gold,#c79a45);font-weight:800;text-decoration:underline;text-underline-offset:3px;">Book Order Help →</a></p>`;
         html = html.replace(currentBookOrderNote, approvedBookOrderNote);
 
+        /* Brand & Authority Strategy: a Growth Consultancy service for established entrepreneurs building authority around their business. */
+        var brandAuthorityDoorway = `
+<section class="section paper" aria-label="Brand and Authority Strategy">
+  <div class="container">
+    <div class="copy-stack reveal">
+      <div class="eyebrow">Brand &amp; Authority Strategy</div>
+      <h2>You've built the business. Now let's build the authority around it.</h2>
+      <p>You're marketing, creating content, showing up online and investing in growth. But building a strong business and building authority around that business aren't always the same thing.</p>
+      <p>More marketing isn't always the answer. Sometimes you need to take what you already know and turn it into something more powerful.</p>
+      <p><strong>A book can turn what you know into an asset that builds authority around your business.</strong></p>
+      <div class="btn-row"><a class="btn secondary" href="brand-authority-strategy.html">Explore Brand &amp; Authority Strategy →</a></div>
+    </div>
+  </div>
+</section>
+`;
+        var growthInquiryMarker = '<section class="section dark" id="growth-inquiry" aria-label="Growth Consultancy inquiry">';
+        var growthInquiryStart = html.indexOf(growthInquiryMarker);
+        if (growthInquiryStart >= 0) {
+          html = html.slice(0, growthInquiryStart) + brandAuthorityDoorway + html.slice(growthInquiryStart);
+        }
+
         var booksSection = `<section class="section" id="books-resources">`;
         var approvedAdditions = `
 <section class="section paper" aria-label="Diagnostic Assessment">
