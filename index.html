@@ -37,7 +37,6 @@
           html = html.slice(0, heroEnd) + startingPointDoorway + html.slice(heroEnd);
         }
 
-        /* Make the new book easy to find from the main site navigation. */
         html = html.replace(
           '<a href="#books-resources">Books & Resources</a>',
           '<a href="#books-resources">Books & Resources</a><a href="speaking.html">Speaking</a><a href="what-are-you-building-this-for.html">New Book</a>'
@@ -60,77 +59,62 @@
         var approvedBookOrderNote = `<p class="book-link-note">Secure checkout and fulfillment are handled by Lulu.<br><br><strong>A Quick Note After You Order</strong><br>Keep your Lulu order confirmation and shipping emails until your books arrive and you’ve checked your order. When your package arrives, we recommend checking your books before discarding the packing slip or packaging.<br><br>If something arrives damaged, defective or incorrect, take clear photos and keep the item and packaging while you contact Lulu.<br><br><strong>Need help with an order?</strong> <a href="book-order-help.html" style="color:var(--gold,#c79a45);font-weight:800;text-decoration:underline;text-underline-offset:3px;">Book Order Help →</a></p>`;
         html = html.replace(currentBookOrderNote, approvedBookOrderNote);
 
-        /* Brand & Authority Strategy: a Growth Consultancy service for established entrepreneurs building authority around their business. */
         var brandAuthorityDoorway = `
 <section class="section paper" aria-label="Brand and Authority Strategy">
-  <div class="container">
-    <div class="copy-stack reveal">
-      <div class="eyebrow">Brand &amp; Authority Strategy</div>
-      <h2>You've built the business. Now let's build the authority around it.</h2>
-      <p>You're marketing, creating content, showing up online and investing in growth. But building a strong business and building authority around that business aren't always the same thing.</p>
-      <p>More marketing isn't always the answer. Sometimes you need to take what you already know and turn it into something more powerful.</p>
-      <p><strong>A book can turn what you know into an asset that builds authority around your business.</strong></p>
-      <div class="btn-row"><a class="btn secondary" href="brand-authority-strategy.html">Explore Brand &amp; Authority Strategy →</a></div>
-    </div>
-  </div>
+  <div class="container"><div class="copy-stack reveal">
+    <div class="eyebrow">Brand &amp; Authority Strategy</div>
+    <h2>You've built the business. Now let's build the authority around it.</h2>
+    <p>You're marketing, creating content, showing up online and investing in growth. But building a strong business and building authority around that business aren't always the same thing.</p>
+    <p>More marketing isn't always the answer. Sometimes you need to take what you already know and turn it into something more powerful.</p>
+    <p><strong>A book can turn what you know into an asset that builds authority around your business.</strong></p>
+    <div class="btn-row"><a class="btn secondary" href="brand-authority-strategy.html">Explore Brand &amp; Authority Strategy →</a></div>
+  </div></div>
 </section>
 `;
         var booksSection = `<section class="section" id="books-resources">`;
         var approvedAdditions = `
 <section class="section paper" aria-label="Diagnostic Assessment">
-  <div class="container">
-    <div class="copy-stack reveal">
-      <h2>I Don't Start With Answers. I Start By Understanding.</h2>
-      <p>If, after our initial conversation, we decide it makes sense to work together, the first paid step is a <strong>Diagnostic Assessment</strong>.</p>
-      <p>This is where I get into the business itself.</p>
-      <p>I'll ask you to share information about your business and answer a series of questions in your own words. Then I take the time to evaluate what you've shared, look at how the business is operating, and consider what may be standing between where you are and where you want to go.</p>
-      <p>From there, I develop my assessment and recommendations.</p>
-      <p>Then we'll schedule a call to go through what I've found, what I believe deserves your attention, and what I recommend you consider next.</p>
-      <p>You may decide to take those recommendations and move forward on your own. Or we may identify additional work you'd like my help with. If we both decide to continue, we'll determine the scope of that work separately.</p>
-      <p><strong>Because I don't believe in giving you answers before I've taken the time to understand the questions.</strong></p>
-    </div>
-  </div>
+  <div class="container"><div class="copy-stack reveal">
+    <h2>I Don't Start With Answers. I Start By Understanding.</h2>
+    <p>If, after our initial conversation, we decide it makes sense to work together, the first paid step is a <strong>Diagnostic Assessment</strong>.</p>
+    <p>This is where I get into the business itself.</p>
+    <p>I'll ask you to share information about your business and answer a series of questions in your own words. Then I take the time to evaluate what you've shared, look at how the business is operating, and consider what may be standing between where you are and where you want to go.</p>
+    <p>From there, I develop my assessment and recommendations.</p>
+    <p>Then we'll schedule a call to go through what I've found, what I believe deserves your attention, and what I recommend you consider next.</p>
+    <p>You may decide to take those recommendations and move forward on your own. Or we may identify additional work you'd like my help with. If we both decide to continue, we'll determine the scope of that work separately.</p>
+    <p><strong>Because I don't believe in giving you answers before I've taken the time to understand the questions.</strong></p>
+  </div></div>
 </section>
 
 <section class="section dark" id="growth-inquiry" aria-label="Growth Consultancy inquiry">
-  <div class="container">
-    <div class="copy-stack reveal">
-      <h2>What Could Change If You Started Now?</h2>
-      <p>Six months from now, your business could look different.<br>Your days could look different.<br>The way you feel about what you've built could be different.</p>
-      <p>But at some point, thinking about what needs to change has to become a decision to begin.</p>
-      <p><strong>Maybe this is that moment.</strong></p>
-      <p>If you're ready to find out what could be possible for you and your business, I'd love to hear from you.</p>
-      <p><strong>Send me an email. Tell me a little about where things are now and where you'd like to go.</strong></p>
-      <p>I'll personally read it, and if I believe I may be able to help, we'll schedule a conversation.</p>
-      <div class="btn-row"><a class="btn gold" href="${inquiryMailto}">Email Elle →</a></div>
-    </div>
-  </div>
+  <div class="container"><div class="copy-stack reveal">
+    <h2>What Could Change If You Started Now?</h2>
+    <p>Six months from now, your business could look different.<br>Your days could look different.<br>The way you feel about what you've built could be different.</p>
+    <p>But at some point, thinking about what needs to change has to become a decision to begin.</p>
+    <p><strong>Maybe this is that moment.</strong></p>
+    <p>If you're ready to find out what could be possible for you and your business, I'd love to hear from you.</p>
+    <p><strong>Send me an email. Tell me a little about where things are now and where you'd like to go.</strong></p>
+    <p>I'll personally read it, and if I believe I may be able to help, we'll schedule a conversation.</p>
+    <div class="btn-row"><a class="btn gold" href="${inquiryMailto}">Email Elle →</a></div>
+  </div></div>
 </section>
 
 `;
         html = html.replace(booksSection, approvedAdditions + booksSection);
 
-        /* Insert Brand & Authority Strategy immediately before the Growth Consultancy inquiry after that section has been added. */
         var growthInquiryMarker = '<section class="section dark" id="growth-inquiry" aria-label="Growth Consultancy inquiry">';
         var growthInquiryStart = html.indexOf(growthInquiryMarker);
-        if (growthInquiryStart >= 0) {
-          html = html.slice(0, growthInquiryStart) + brandAuthorityDoorway + html.slice(growthInquiryStart);
-        }
+        if (growthInquiryStart >= 0) html = html.slice(0, growthInquiryStart) + brandAuthorityDoorway + html.slice(growthInquiryStart);
 
-        /* Approved book addition: feature What Are You Building This For? after the existing Books & Resources section. */
         var bookFeature = `
 <section class="section paper" aria-label="What Are You Building This For?">
-  <div class="container">
-    <div class="copy-stack reveal" style="max-width:860px;margin:0 auto;text-align:center;">
-      <div class="eyebrow">New from Elle Lundy</div>
-      <h2>What Are You Building This For?</h2>
-      <p class="kicker"><strong>Build a Business That Supports the Life You Actually Want</strong></p>
-      <p>Growth can bring more clients, more revenue and more opportunities. It can also create a business that depends too heavily on you. This book asks you to look at what growth is actually creating—and what you want your business to make possible.</p>
-      <div class="btn-row" style="justify-content:center;">
-        <a class="btn secondary" href="what-are-you-building-this-for.html">Explore the Book →</a>
-      </div>
-    </div>
-  </div>
+  <div class="container"><div class="copy-stack reveal" style="max-width:860px;margin:0 auto;text-align:center;">
+    <div class="eyebrow">New from Elle Lundy</div>
+    <h2>What Are You Building This For?</h2>
+    <p class="kicker"><strong>Build a Business That Supports the Life You Actually Want</strong></p>
+    <p>Growth can bring more clients, more revenue and more opportunities. It can also create a business that depends too heavily on you. This book asks you to look at what growth is actually creating—and what you want your business to make possible.</p>
+    <div class="btn-row" style="justify-content:center;"><a class="btn secondary" href="what-are-you-building-this-for.html">Explore the Book →</a></div>
+  </div></div>
 </section>`;
         var bookSectionStart = html.indexOf(booksSection);
         if (bookSectionStart >= 0) {
@@ -141,7 +125,6 @@
           }
         }
 
-        /* Approved Resources addition: place Insights from Elle immediately after the existing Books & Resources section. */
         var booksStart = html.indexOf(booksSection);
         if (booksStart >= 0) {
           var booksEnd = html.indexOf('</section>', booksStart);
@@ -156,31 +139,31 @@
       <p class="kicker"><strong>Start With Where You Want It to Take You.</strong></p>
       <p>A successful business can create extraordinary opportunities. Before deciding whether the next one deserves a yes, establish what you want your success to make possible—and whether the opportunity takes you closer to it.</p>
       <div class="btn-row"><a class="btn secondary" href="insights-should-i-expand-my-successful-business.html">Read the Insight →</a></div>
-    </div><div style="margin-top:48px;padding-top:40px;border-top:1px solid rgba(16,38,31,.14);">
-  <h2>Has My Business Outgrown the Way I’m Running It?</h2>
-  <p class="kicker"><strong>Before you add more, make sure you know what the business actually needs.</strong></p>
-  <p>Your business is growing, but running it has become harder. What worked before may no longer fit the business you have today. Before adding another hire, system or strategy, understand what is actually creating the strain.</p>
-  <div class="btn-row"><a class="btn secondary" href="insights-has-my-business-outgrown-the-way-im-running-it.html">Read the Insight →</a></div>
-</div>
-<div style="margin-top:48px;padding-top:40px;border-top:1px solid rgba(16,38,31,.14);">
-  <h2>How Do I Choose Between Several Good Opportunities for My Business?</h2>
-  <p class="kicker"><strong>When every option has potential, look at what each one will create.</strong></p>
-  <p>Several opportunities can all look like the right move. The question isn't simply which one could make the most money. Look at what each opportunity will require, what it will create, and whether it moves you toward the business and life you actually want.</p>
-  <div class="btn-row"><a class="btn secondary" href="insights-how-to-choose-between-business-growth-opportunities.html">Read the Insight →</a></div>
-</div>
-<div style="margin-top:48px;padding-top:40px;border-top:1px solid rgba(16,38,31,.14);">
-  <h2>Why Does Everything in My Business Still Depend on Me?</h2>
-  <p class="kicker"><strong>Before you add another solution, understand what is actually keeping you from where you want to go.</strong></p>
-  <p>You’ve hired people, put systems in place and handed things off. Yet decisions, problems and questions still come back to you. The answer may not be more delegation, more software or another hire. First, understand what is actually happening—and where you’re trying to go.</p>
-  <div class="btn-row"><a class="btn secondary" href="insights-why-does-everything-in-my-business-depend-on-me.html">Read the Insight →</a></div>
-</div>
+    </div>
+    <div style="margin-top:48px;padding-top:40px;border-top:1px solid rgba(16,38,31,.14);">
+      <h2>Has My Business Outgrown the Way I’m Running It?</h2>
+      <p class="kicker"><strong>Before you add more, make sure you know what the business actually needs.</strong></p>
+      <p>Your business is growing, but running it has become harder. What worked before may no longer fit the business you have today. Before adding another hire, system or strategy, understand what is actually creating the strain.</p>
+      <div class="btn-row"><a class="btn secondary" href="insights-has-my-business-outgrown-the-way-im-running-it.html">Read the Insight →</a></div>
+    </div>
+    <div style="margin-top:48px;padding-top:40px;border-top:1px solid rgba(16,38,31,.14);">
+      <h2>How Do I Choose Between Several Good Opportunities for My Business?</h2>
+      <p class="kicker"><strong>When every option has potential, look at what each one will create.</strong></p>
+      <p>Several opportunities can all look like the right move. The question isn't simply which one could make the most money. Look at what each opportunity will require, what it will create, and whether it moves you toward the business and life you actually want.</p>
+      <div class="btn-row"><a class="btn secondary" href="insights-how-to-choose-between-business-growth-opportunities.html">Read the Insight →</a></div>
+    </div>
+    <div style="margin-top:48px;padding-top:40px;border-top:1px solid rgba(16,38,31,.14);">
+      <h2>When Your Business Depends Too Much on You</h2>
+      <p class="kicker"><strong>Your business works. Because you do. What happens when you stop?</strong></p>
+      <p>Your business can be profitable, growing and successful while still depending heavily on you. When every important decision, problem and detail still comes back to you, growth and independence are not the same thing.</p>
+      <div class="btn-row"><a class="btn secondary" href="insights-why-does-everything-in-my-business-depend-on-me.html">Read the Insight →</a></div>
+    </div>
   </div>
 </section>`;
             html = html.slice(0, booksEnd) + insightsDoorway + html.slice(booksEnd);
           }
         }
 
-        /* Owned audience: low-pressure email signup before the footer. */
         var stayConnectedSection = `
 <section aria-label="Stay connected" style="background:var(--paper,#fffaf1);border-top:1px solid rgba(199,154,69,.42);padding:56px 20px;text-align:center;">
   <div style="width:min(820px,100%);margin:0 auto;">
@@ -192,13 +175,9 @@
     </div>
   </div>
 </section>`;
-        if (html.indexOf('<footer') >= 0) {
-          html = html.replace('<footer', stayConnectedSection + '<footer');
-        } else if (html.indexOf('</body>') >= 0) {
-          html = html.replace('</body>', stayConnectedSection + '</body>');
-        } else {
-          html += stayConnectedSection;
-        }
+        if (html.indexOf('<footer') >= 0) html = html.replace('<footer', stayConnectedSection + '<footer');
+        else if (html.indexOf('</body>') >= 0) html = html.replace('</body>', stayConnectedSection + '</body>');
+        else html += stayConnectedSection;
 
         document.open();
         document.write(html);
