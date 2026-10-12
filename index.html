@@ -12,6 +12,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Growth Consultancy</title>
+  <link rel="canonical" href="https://thegrowthconsultancybyelle.com/">
 </head>
 <body>
   <script>
@@ -30,7 +31,7 @@
 <section aria-label="Starting Point" style="background:var(--paper,#fffaf1);border-top:1px solid rgba(199,154,69,.42);border-bottom:1px solid rgba(199,154,69,.42);padding:32px 20px;text-align:center;">
   <div style="width:min(900px,100%);margin:0 auto;">
     <p style="margin:0 0 7px;font-family:var(--sans,Arial,sans-serif);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--gold,#c79a45);">Not a business owner?</p>
-    <a href="starting-point.html" style="display:inline-block;font-family:var(--serif,Georgia,serif);font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.25;color:var(--ink,#10261f);text-decoration:none;border-bottom:1px solid var(--gold,#c79a45);padding-bottom:2px;">Start here → Starting Point</a>
+    <a href="starting-point" style="display:inline-block;font-family:var(--serif,Georgia,serif);font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.25;color:var(--ink,#10261f);text-decoration:none;border-bottom:1px solid var(--gold,#c79a45);padding-bottom:2px;">Start here → Starting Point</a>
     <p style="margin:10px auto 0;max-width:650px;font-family:var(--sans,Arial,sans-serif);font-size:.92rem;line-height:1.55;color:var(--muted,#65716b);">You don’t have to know what comes next. Starting Point is a place to explore what else could be possible for your life.</p>
   </div>
 </section>`;
@@ -39,7 +40,7 @@
 
         html = html.replace(
           '<a href="#books-resources">Books & Resources</a>',
-          '<a href="#books-resources">Books & Resources</a><a href="speaking.html">Speaking</a><a href="what-are-you-building-this-for.html">New Book</a>'
+          '<a href="#books-resources">Books & Resources</a><a href="speaking">Speaking</a><a href="what-are-you-building-this-for">New Book</a>'
         );
 
         var currentConsultantParagraph = `<p>When I look at a business, I want to understand it before I make recommendations about it. I want to know how it became what it is today, why certain decisions were made, what you value about what you've built and what you want it to make possible from here.</p>`;
@@ -56,7 +57,7 @@
         html = html.split('mailto:elle@thegrowthconsultancybyelle.com?subject=Growth%20Consultancy%20Inquiry').join(inquiryMailto);
 
         var currentBookOrderNote = `<p class="book-link-note">Secure checkout and fulfillment are handled by Lulu.<br><strong>Need help with your order?</strong> If your book arrives damaged, has a printing issue, or you have a question about your order, please contact The Growth Consultancy and we’ll help you with next steps. Because each book is printed to order, returns and replacements are subject to our Book Order Help policy.</p>`;
-        var approvedBookOrderNote = `<p class="book-link-note">Secure checkout and fulfillment are handled by Lulu.<br><br><strong>A Quick Note After You Order</strong><br>Keep your Lulu order confirmation and shipping emails until your books arrive and you’ve checked your order. When your package arrives, we recommend checking your books before discarding the packing slip or packaging.<br><br>If something arrives damaged, defective or incorrect, take clear photos and keep the item and packaging while you contact Lulu.<br><br><strong>Need help with an order?</strong> <a href="book-order-help.html" style="color:var(--gold,#c79a45);font-weight:800;text-decoration:underline;text-underline-offset:3px;">Book Order Help →</a></p>`;
+        var approvedBookOrderNote = `<p class="book-link-note">Secure checkout and fulfillment are handled by Lulu.<br><br><strong>A Quick Note After You Order</strong><br>Keep your Lulu order confirmation and shipping emails until your books arrive and you’ve checked your order. When your package arrives, we recommend checking your books before discarding the packing slip or packaging.<br><br>If something arrives damaged, defective or incorrect, take clear photos and keep the item and packaging while you contact Lulu.<br><br><strong>Need help with an order?</strong> <a href="book-order-help" style="color:var(--gold,#c79a45);font-weight:800;text-decoration:underline;text-underline-offset:3px;">Book Order Help →</a></p>`;
         html = html.replace(currentBookOrderNote, approvedBookOrderNote);
 
         var brandAuthorityDoorway = `
@@ -67,7 +68,7 @@
     <p>You're marketing, creating content, showing up online and investing in growth. But building a strong business and building authority around that business aren't always the same thing.</p>
     <p>More marketing isn't always the answer. Sometimes you need to take what you already know and turn it into something more powerful.</p>
     <p><strong>A book can turn what you know into an asset that builds authority around your business.</strong></p>
-    <div class="btn-row"><a class="btn secondary" href="brand-authority-strategy.html">Explore Brand &amp; Authority Strategy →</a></div>
+    <div class="btn-row"><a class="btn secondary" href="brand-authority-strategy">Explore Brand &amp; Authority Strategy →</a></div>
   </div></div>
 </section>
 `;
@@ -113,7 +114,7 @@
     <h2>What Are You Building This For?</h2>
     <p class="kicker"><strong>Build a Business That Supports the Life You Actually Want</strong></p>
     <p>Growth can bring more clients, more revenue and more opportunities. It can also create a business that depends too heavily on you. This book asks you to look at what growth is actually creating—and what you want your business to make possible.</p>
-    <div class="btn-row" style="justify-content:center;"><a class="btn secondary" href="what-are-you-building-this-for.html">Explore the Book →</a></div>
+    <div class="btn-row" style="justify-content:center;"><a class="btn secondary" href="what-are-you-building-this-for">Explore the Book →</a></div>
   </div></div>
 </section>`;
         var bookSectionStart = html.indexOf(booksSection);
@@ -138,25 +139,25 @@
       <h2>Should I Expand My Successful Business?</h2>
       <p class="kicker"><strong>Start With Where You Want It to Take You.</strong></p>
       <p>A successful business can create extraordinary opportunities. Before deciding whether the next one deserves a yes, establish what you want your success to make possible—and whether the opportunity takes you closer to it.</p>
-      <div class="btn-row"><a class="btn secondary" href="insights-should-i-expand-my-successful-business.html">Read the Insight →</a></div>
+      <div class="btn-row"><a class="btn secondary" href="insights-should-i-expand-my-successful-business">Read the Insight →</a></div>
     </div>
     <div style="margin-top:48px;padding-top:40px;border-top:1px solid rgba(16,38,31,.14);">
       <h2>Has My Business Outgrown the Way I’m Running It?</h2>
       <p class="kicker"><strong>Before you add more, make sure you know what the business actually needs.</strong></p>
       <p>Your business is growing, but running it has become harder. What worked before may no longer fit the business you have today. Before adding another hire, system or strategy, understand what is actually creating the strain.</p>
-      <div class="btn-row"><a class="btn secondary" href="insights-has-my-business-outgrown-the-way-im-running-it.html">Read the Insight →</a></div>
+      <div class="btn-row"><a class="btn secondary" href="insights-has-my-business-outgrown-the-way-im-running-it">Read the Insight →</a></div>
     </div>
     <div style="margin-top:48px;padding-top:40px;border-top:1px solid rgba(16,38,31,.14);">
       <h2>How Do I Choose Between Several Good Opportunities for My Business?</h2>
       <p class="kicker"><strong>When every option has potential, look at what each one will create.</strong></p>
       <p>Several opportunities can all look like the right move. The question isn't simply which one could make the most money. Look at what each opportunity will require, what it will create, and whether it moves you toward the business and life you actually want.</p>
-      <div class="btn-row"><a class="btn secondary" href="insights-how-to-choose-between-business-growth-opportunities.html">Read the Insight →</a></div>
+      <div class="btn-row"><a class="btn secondary" href="insights-how-to-choose-between-business-growth-opportunities">Read the Insight →</a></div>
     </div>
     <div style="margin-top:48px;padding-top:40px;border-top:1px solid rgba(16,38,31,.14);">
       <h2>When Your Business Depends Too Much on You</h2>
       <p class="kicker"><strong>Your business works. Because you do. What happens when you stop?</strong></p>
       <p>Your business can be profitable, growing and successful while still depending heavily on you. When every important decision, problem and detail still comes back to you, growth and independence are not the same thing.</p>
-      <div class="btn-row"><a class="btn secondary" href="insights-why-does-everything-in-my-business-depend-on-me.html">Read the Insight →</a></div>
+      <div class="btn-row"><a class="btn secondary" href="insights-why-does-everything-in-my-business-depend-on-me">Read the Insight →</a></div>
     </div>
   </div>
 </section>`;
