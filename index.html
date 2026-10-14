@@ -38,6 +38,9 @@
           html = html.slice(0, heroEnd) + startingPointDoorway + html.slice(heroEnd);
         }
 
+        // Stage one: move Work With Elle from a scrolling anchor to its dedicated page.
+        html = html.replace('<a href="#the-work">Work With Elle</a>', '<a href="work-with-elle">Work With Elle</a>');
+
         html = html.replace(
           '<a href="#books-resources">Books & Resources</a>',
           '<a href="#books-resources">Books & Resources</a><a href="speaking">Speaking</a><a href="what-are-you-building-this-for">New Book</a>'
