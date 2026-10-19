@@ -44,7 +44,7 @@
           '<a href="work-with-elle">Work With Elle</a>'
         );
         html = html.replace(
-          '<a href="#books-resources">Books & Resources</a>',
+          '<a href="books-resources">Books & Resources</a>',
           '<a href="starting-point">Starting Point</a><a href="speaking">Speaking</a><a href="#books-resources">Books & Resources</a>'
         );
         // The hero should lead to the dedicated Work With Elle page, too.
@@ -120,6 +120,12 @@
         var growthInquiryMarker = '<section class="section dark" id="growth-inquiry" aria-label="Growth Consultancy inquiry">';
         var growthInquiryStart = html.indexOf(growthInquiryMarker);
         if (growthInquiryStart >= 0) html = html.slice(0, growthInquiryStart) + brandAuthorityDoorway + html.slice(growthInquiryStart);
+
+        // Keep the homepage book cover and purchase links, and offer the dedicated resource page.
+        html = html.replace(
+          '<div class="eyebrow">Books &amp; Resources</div>',
+          '<div class="eyebrow">Books &amp; Resources</div><p><a href="books-resources" style="font-weight:800;color:var(--ink,#10261f);text-underline-offset:4px;">Explore All Books &amp; Resources →</a></p>'
+        );
 
         var bookFeature = `
 <section class="section paper" aria-label="What Are You Building This For?">
