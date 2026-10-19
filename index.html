@@ -53,6 +53,13 @@
         var currentReadyParagraph = `<p>If you're considering working with me, I highly recommend completing both before scheduling your first session. You'll come into our conversation already thinking about some of the questions we'll need to explore, which means we can spend more of our time together focused on where you want to go and what your business needs to get you there.</p>`;
         var approvedReadyParagraph = `<p>If you're considering working with me, I highly recommend completing both before reaching out. You'll come into our conversation already thinking about some of the questions we'll need to explore, which allows us to begin with a deeper understanding of where you are and where you'd like to go.</p>`;
         html = html.replace(currentReadyParagraph, approvedReadyParagraph);
+        // Stage two: condense the Ready for Success homepage introduction while retaining cover and Lulu links.
+        var bookIntroduction = `<p><em>Ready for Success</em> and its companion workbook were created for entrepreneurs preparing for meaningful business change. Because knowing what needs to change and being ready to make that change are two very different things.</p>
+      <p>The book and workbook ask you to look honestly at how you make decisions, how you respond when change becomes uncomfortable and whether you're prepared to follow through when growth asks something different of you.</p>`;
+        var shorterBookIntroduction = `<p><em>Ready for Success</em> and its companion workbook help you examine your readiness for meaningful change—how you make decisions, respond to discomfort and follow through when growth asks something different of you.</p>`;
+        html = html.replace(bookIntroduction, shorterBookIntroduction);
+        html = html.replace(approvedReadyParagraph, '');
+
 
         html = html.replace(/<a([^>]*href=")[^"]*("[^>]*)>Start a Conversation<\/a>/, '<a$1#growth-inquiry$2>Contact Elle</a>');
 
