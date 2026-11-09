@@ -373,7 +373,32 @@ p{margin:0}
 
 const menu = document.querySelector('.menu');
 const links = document.querySelector('.nav-links');
-if (menu && links) menu.addEventListener('click', () => links.classList.toggle('open'));
+if (menu && links) {
+  menu.setAttribute('aria-expanded', 'false');
+  menu.setAttribute('aria-controls', 'main-site-navigation');
+  links.id = 'main-site-navigation';
+  function closeMobileMenu() {
+    links.classList.remove('open');
+    menu.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('aria-label', 'Open menu');
+  }
+  menu.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('open');
+    menu.setAttribute('aria-expanded', String(isOpen));
+    menu.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+  links.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+  document.addEventListener('click', event => {
+    if (!menu.contains(event.target) && !links.contains(event.target)) closeMobileMenu();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeMobileMenu();
+  });
+  window.addEventListener('scroll', closeMobileMenu, {passive:true});
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) closeMobileMenu();
+  });
+}
 
 const io = new IntersectionObserver(entries => {
   entries.forEach(entry => {
