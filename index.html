@@ -186,6 +186,9 @@
         else if (html.indexOf('</body>') >= 0) html = html.replace('</body>', stayConnectedSection + '</body>');
         else html += stayConnectedSection;
 
+        // Open the dedicated books catalog instead of scrolling to the homepage section.
+        html = html.replace('<a href="#books-resources">Books & Resources</a>', '<a href="books-resources">Books & Resources</a>');
+
         document.open();
         document.write(html);
         document.close();
